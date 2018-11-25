@@ -11,7 +11,7 @@ RUN apt-get -yqq update && \
     apt-get -yqq clean && \
     rm -rf /var/lib/apt/lists/* /var/cache/* /tmp/* /var/tmp/*
 
-RUN curl -sL https://deb.nodesource.com/setup_11.x | bash - && apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_9.x | bash - && apt-get install -y nodejs
 RUN curl -L https://npmjs.org/install.sh | sh
 
 RUN usermod -a -G bluetooth root && \
